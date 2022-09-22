@@ -1,0 +1,138 @@
+package task4;
+
+import task3.Circle;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Shop {
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Computer computer1 = new Computer(1, "Z-390", "Intel-i9-9900k", 32, 8);
+        Computer computer2 = new Computer(2, "B-250", "Intel-i5-7400", 16, 4);
+        Computer computer3 = new Computer(3, "AM4", "AMD-Ryzen-5-3600", 12, 6);
+        ArrayList<Computer> computers = new ArrayList<Computer>();
+        computers.add(computer1);
+        computers.add(computer2);
+        computers.add(computer3);
+
+
+        int flag = 0;
+        int articul;
+        String chipset;
+        String processor;
+        int RAM;
+        int GPU;
+        while (flag < 7) {
+            System.out.println("What do you want to do?");
+            System.out.println("0 - Print all computers in database");
+            System.out.println("1 - Add computer to database");
+            System.out.println("2 - Find computers in database by articul");
+            System.out.println("3 - Find computers in database by chipset");
+            System.out.println("4 - Find computers in database by processor");
+            System.out.println("5 - Find computers in database by GB of RAM");
+            System.out.println("6 - Find computers in database by GB of GPU");
+            System.out.println("7 - Exit");
+            System.out.print("Enter: ");
+            flag = scanner.nextInt();
+
+            switch (flag) {
+                case 0:
+                    System.out.println("All computers in database:");
+                    for (Computer c : computers)
+                        System.out.println(c);
+                    break;
+                case 1:
+                    System.out.print("Enter articul: ");
+                    articul = scanner.nextInt();
+                    boolean f = false;
+                    int arr_size = computers.size();
+                    do {
+                        arr_size = computers.size();
+                        for (Computer comp : computers) {
+                            if (comp.getArticul() == articul){
+                                System.out.print("Such articul is already exist! Enter another: ");
+                                articul = scanner.nextInt();
+                                f =true;
+                            }
+                            arr_size--;
+                        }
+                        if (arr_size == 0) {
+                            break;
+                        }
+                    } while (f);
+                    System.out.print("Enter chipset: ");
+                    chipset = scanner.next();
+                    System.out.print("Enter processor: ");
+                    processor = scanner.nextLine();
+                    System.out.print("Enter a number GB of RAM: ");
+                    RAM = scanner.nextInt();
+                    System.out.print("Enter a number GB of GPU: ");
+                    GPU = scanner.nextInt();
+
+                    Computer computer = new Computer(articul, chipset, processor, RAM, GPU);
+                    computers.add(computer);
+                    break;
+                case 2:
+                    System.out.print("Enter an articul of the computer (int): ");
+                    articul = scanner.nextInt();
+                    for (Computer c :
+                            computers) {
+                        if (c.getArticul() == articul) {
+                            System.out.println(c);
+                            break;
+                        }
+                    }
+                    break;
+                case 3:
+                    System.out.print("Enter a chipset of the computer: ");
+                    chipset = scanner.next();
+                    for (Computer c :
+                            computers) {
+                        if (c.getChipset().equals(chipset)) {
+                            System.out.println(c);
+                            break;
+                        }
+                    }
+                    break;
+                case 4:
+                    System.out.print("Enter a processor of the computer: ");
+                    processor = scanner.next();
+                    for (Computer c :
+                            computers) {
+                        if (c.getProcessor().equals(processor)) {
+                            System.out.println(c);
+                            break;
+                        }
+                    }
+                    break;
+                case 5:
+                    System.out.print("Enter a GB number of RAM of the computer: ");
+                    RAM = scanner.nextInt();
+                    for (Computer c :
+                            computers) {
+                        if (c.getRAM() == RAM) {
+                            System.out.println(c);
+                            break;
+                        }
+                    }
+                    break;
+                case 6:
+                    System.out.print("Enter a GB number of GPU of the computer: ");
+                    GPU = scanner.nextInt();
+                    for (Computer c :
+                            computers) {
+                        if (c.getGPU() == GPU) {
+                            System.out.println(c);
+                            break;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+}
