@@ -19,26 +19,28 @@ public class Shop {
         computers.add(computer3);
 
 
-        int flag = 0;
+        boolean flag;
+        int menu = 0;
         int articul;
         String chipset;
         String processor;
         int RAM;
         int GPU;
-        while (flag < 7) {
+        while (menu < 7) {
             System.out.println("What do you want to do?");
             System.out.println("0 - Print all computers in database");
             System.out.println("1 - Add computer to database");
-            System.out.println("2 - Find computers in database by articul");
+            System.out.println("2 - Find computer in database by articul");
             System.out.println("3 - Find computers in database by chipset");
             System.out.println("4 - Find computers in database by processor");
             System.out.println("5 - Find computers in database by GB of RAM");
             System.out.println("6 - Find computers in database by GB of GPU");
             System.out.println("7 - Exit");
             System.out.print("Enter: ");
-            flag = scanner.nextInt();
+            menu = scanner.nextInt();
+            flag = true;
 
-            switch (flag) {
+            switch (menu) {
                 case 0:
                     System.out.println("All computers in database:");
                     for (Computer c : computers)
@@ -66,7 +68,7 @@ public class Shop {
                     System.out.print("Enter chipset: ");
                     chipset = scanner.next();
                     System.out.print("Enter processor: ");
-                    processor = scanner.nextLine();
+                    processor = scanner.next();
                     System.out.print("Enter a number GB of RAM: ");
                     RAM = scanner.nextInt();
                     System.out.print("Enter a number GB of GPU: ");
@@ -74,6 +76,7 @@ public class Shop {
 
                     Computer computer = new Computer(articul, chipset, processor, RAM, GPU);
                     computers.add(computer);
+                    System.out.println("Computer was added successfully!");
                     break;
                 case 2:
                     System.out.print("Enter an articul of the computer (int): ");
@@ -82,9 +85,12 @@ public class Shop {
                             computers) {
                         if (c.getArticul() == articul) {
                             System.out.println(c);
+                            flag = false;
                             break;
                         }
                     }
+                    if (flag)
+                        System.out.println("Computer with articul = " + articul + " wasn't found!");
                     break;
                 case 3:
                     System.out.print("Enter a chipset of the computer: ");
@@ -93,9 +99,11 @@ public class Shop {
                             computers) {
                         if (c.getChipset().equals(chipset)) {
                             System.out.println(c);
-                            break;
+                            flag = false;
                         }
                     }
+                    if (flag)
+                        System.out.println("Computers with chipset " + chipset + " wasn't found!");
                     break;
                 case 4:
                     System.out.print("Enter a processor of the computer: ");
@@ -104,9 +112,11 @@ public class Shop {
                             computers) {
                         if (c.getProcessor().equals(processor)) {
                             System.out.println(c);
-                            break;
+                            flag = false;
                         }
                     }
+                    if (flag)
+                        System.out.println("Computers with processor " + processor + " wasn't found!");
                     break;
                 case 5:
                     System.out.print("Enter a GB number of RAM of the computer: ");
@@ -115,9 +125,11 @@ public class Shop {
                             computers) {
                         if (c.getRAM() == RAM) {
                             System.out.println(c);
-                            break;
+                            flag = false;
                         }
                     }
+                    if (flag)
+                        System.out.println("Computers with " + RAM + " GB of RAM wasn't found!");
                     break;
                 case 6:
                     System.out.print("Enter a GB number of GPU of the computer: ");
@@ -126,9 +138,11 @@ public class Shop {
                             computers) {
                         if (c.getGPU() == GPU) {
                             System.out.println(c);
-                            break;
+                            flag = false;
                         }
                     }
+                    if (flag)
+                        System.out.println("Computers with " + GPU + " GB of GPU wasn't found!");
                     break;
                 default:
                     break;
