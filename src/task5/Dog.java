@@ -1,8 +1,8 @@
 package task5;
 
 public class Dog {
-    String name = "Unknown name";
-    int age = -1;
+    private String name = "Unknown name";
+    private int age = -1;
 
     public Dog() {
 
