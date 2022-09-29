@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c916c4d-2604-4144-b51e-26c73cb0de70" name="Changes" comment="Dogs completed">
-      <change afterPath="$PROJECT_DIR$/src/task6/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task6/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task6/TestCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task7/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task7/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task7/Bookshelf.java" afterDir="false" />
+    <list default="true" id="1c916c4d-2604-4144-b51e-26c73cb0de70" name="Changes" comment="Books added but not tested">
+      <change afterPath="$PROJECT_DIR$/src/task10/HowMany.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task8/Reverse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task9/Poker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task5/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task5/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task7/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task7/BookTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +53,7 @@
       <recent name="C:\Users\badha\IdeaProjects\JavaPr3\src\task6" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BookTest">
+  <component name="RunManager" selected="Application.HowMany">
     <configuration name="BookTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="task7.BookTest" />
       <module name="untitled27" />
@@ -70,12 +67,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DogKennel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task5.DogKennel" />
+    <configuration name="HowMany" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task10.HowMany" />
       <module name="untitled27" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="task5.*" />
+          <option name="PATTERN" value="task10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,12 +80,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Shop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task4.Shop" />
+    <configuration name="Poker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task9.Poker" />
       <module name="untitled27" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="task4.*" />
+          <option name="PATTERN" value="task9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reverse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task8.Reverse" />
+      <module name="untitled27" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,26 +119,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task3.Tester" />
-      <module name="untitled27" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="task3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HowMany" />
+        <item itemvalue="Application.Poker" />
+        <item itemvalue="Application.Reverse" />
         <item itemvalue="Application.BookTest" />
         <item itemvalue="Application.TestCircle" />
-        <item itemvalue="Application.DogKennel" />
-        <item itemvalue="Application.Shop" />
-        <item itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664439596007</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Books added but not tested">
+      <created>1664445398980</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664445398980</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dodelt' formatirovanie" />
     <MESSAGE value="Dogs completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dogs completed" />
+    <MESSAGE value="Books added but not tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="Books added but not tested" />
   </component>
 </project>

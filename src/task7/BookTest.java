@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class BookTest {
     public static void main(String[] args) {
         Bookshelf bookshelf = new Bookshelf();
-        Book book1 = new Book("Marcel Proust","In Search of Lost Time", 1913);
-        Book book2 = new Book("Herman Melville","Moby Dick", 1851);
-        Book book3 = new Book("James Joyce","Ulysses", 2012);
+        Book book1 = new Book("Marcel_Proust","In_Search_of_Lost_Time", 1913);
+        Book book2 = new Book("Herman_Melville","Moby_Dick", 1851);
+        Book book3 = new Book("James_Joyce","Ulysses", 2012);
 
         bookshelf.addBook(book1);
         bookshelf.addBook(book2);
