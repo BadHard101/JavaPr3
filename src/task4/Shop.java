@@ -1,7 +1,5 @@
 package task4;
 
-import task3.Circle;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,21 +19,22 @@ public class Shop {
 
         boolean flag;
         int menu = 0;
-        int articul;
+        int article;
         String chipset;
         String processor;
         int RAM;
         int GPU;
-        while (menu < 7) {
+        while (menu != 8) {
             System.out.println("What do you want to do?");
             System.out.println("0 - Print all computers in database");
             System.out.println("1 - Add computer to database");
-            System.out.println("2 - Find computer in database by articul");
+            System.out.println("2 - Find computer in database by article");
             System.out.println("3 - Find computers in database by chipset");
             System.out.println("4 - Find computers in database by processor");
             System.out.println("5 - Find computers in database by GB of RAM");
             System.out.println("6 - Find computers in database by GB of GPU");
-            System.out.println("7 - Exit");
+            System.out.println("7 - Delete computer from database by article");
+            System.out.println("8 - Exit");
             System.out.print("Enter: ");
             menu = scanner.nextInt();
             flag = true;
@@ -47,16 +46,16 @@ public class Shop {
                         System.out.println(c);
                     break;
                 case 1:
-                    System.out.print("Enter articul: ");
-                    articul = scanner.nextInt();
+                    System.out.print("Enter article: ");
+                    article = scanner.nextInt();
                     boolean f = false;
                     int arr_size = computers.size();
                     do {
                         arr_size = computers.size();
                         for (Computer comp : computers) {
-                            if (comp.getArticul() == articul){
-                                System.out.print("Such articul is already exist! Enter another: ");
-                                articul = scanner.nextInt();
+                            if (comp.getArticle() == article){
+                                System.out.print("Such article is already exist! Enter another: ");
+                                article = scanner.nextInt();
                                 f =true;
                             }
                             arr_size--;
@@ -74,23 +73,23 @@ public class Shop {
                     System.out.print("Enter a number GB of GPU: ");
                     GPU = scanner.nextInt();
 
-                    Computer computer = new Computer(articul, chipset, processor, RAM, GPU);
+                    Computer computer = new Computer(article, chipset, processor, RAM, GPU);
                     computers.add(computer);
                     System.out.println("Computer was added successfully!");
                     break;
                 case 2:
-                    System.out.print("Enter an articul of the computer (int): ");
-                    articul = scanner.nextInt();
+                    System.out.print("Enter an article of the computer (int): ");
+                    article = scanner.nextInt();
                     for (Computer c :
                             computers) {
-                        if (c.getArticul() == articul) {
+                        if (c.getArticle() == article) {
                             System.out.println(c);
                             flag = false;
                             break;
                         }
                     }
                     if (flag)
-                        System.out.println("Computer with articul = " + articul + " wasn't found!");
+                        System.out.println("Computer with article = " + article + " wasn't found!");
                     break;
                 case 3:
                     System.out.print("Enter a chipset of the computer: ");
@@ -144,6 +143,17 @@ public class Shop {
                     if (flag)
                         System.out.println("Computers with " + GPU + " GB of GPU wasn't found!");
                     break;
+                case 7:
+                    System.out.print("Enter an article of the computer: ");
+                    article = scanner.nextInt();
+                    for (Computer c :
+                        computers) {
+                    if (c.getArticle() == article) {
+                        computers.remove(c);
+                        System.out.println("Computer is completely deleted!");
+                        break;
+                    }
+                }
                 default:
                     break;
             }

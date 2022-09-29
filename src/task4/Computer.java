@@ -1,26 +1,26 @@
 package task4;
 
 public class Computer {
-    private int articul = -1;
+    private int article = -1;
     private String chipset = "unknown chipset";
     private String processor = "unknown processor";
     private int RAM = -1;
     private int GPU = -1;
 
-    public Computer(int articul, String chipset, String processor, int RAM, int GPU) {
-        this.articul = articul;
+    public Computer(int article, String chipset, String processor, int RAM, int GPU) {
+        this.article = article;
         this.chipset = chipset;
         this.processor = processor;
         this.RAM = RAM;
         this.GPU = GPU;
     }
 
-    public int getArticul() {
-        return articul;
+    public int getArticle() {
+        return article;
     }
 
-    public void setArticul(int articul) {
-        this.articul = articul;
+    public void setArticle(int article) {
+        this.article = article;
     }
 
     public String getChipset() {
@@ -57,7 +57,7 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer Articul: " + articul +
+        return "Computer Article: " + article +
                 ", Chipset: '" + chipset + '\'' +
                 ", Processor: '" + processor + '\'' +
                 ", RAM = " + RAM +
